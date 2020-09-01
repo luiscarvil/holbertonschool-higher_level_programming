@@ -5,7 +5,7 @@ aux = number % 10
 if number < 0:
     aux = (number % -10)
 if aux > 5:
-    print("Last digit of", number, "is", aux, "greater than 5")
+    print("Last digit of", number, "is", aux, "and is greater than 5")
 if aux == 0:
     print("Last digit of", number, "is", aux, "and is 0")
 elif aux < 6 and aux != 0:
