@@ -6,8 +6,7 @@ if len(argv) - 1 == 0:
 else:
     aux = len(argv) - 1
     if aux == 1:
-        print("{} argument:".format(aux))
-        print("{}: {}".format(aux, sys.argv[aux]))
+        print("1 argument:\n{}: {}".format(aux, sys.argv[aux]))
     else:
         print("{} arguments:".format(aux))
         for i in range(1, aux + 1):
