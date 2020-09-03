@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import _print
-_print("#pythoniscool")
+if __name__ == "__main__":
+    import _print
+    _print("#pythoniscool")
