@@ -1,1 +1,0 @@
-"Double linkes list in C"
