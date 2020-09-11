@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
         return 0
     for i in range(len(roman_string)):
         if i > 0 and numb[roman_string[i - 1]] < numb[roman_string[i]]:
-            total += numb[roman_string[i - 1]] * numb[roman_string[i]] - 2
+            total += numb[roman_string[i]] - 2 * numb[roman_string[i - 1]] 
         else:
             total = total + numb[roman_string[i]]
     return total
