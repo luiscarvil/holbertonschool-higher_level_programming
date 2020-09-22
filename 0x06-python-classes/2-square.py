@@ -2,6 +2,8 @@
 """
 square method - print square
 """
+
+
 class Square:
     """
     class square check conditions
