@@ -9,8 +9,8 @@ class Square:
     class square init size and position
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -43,7 +43,7 @@ class Square:
     def position(self, value):
         if type(value) is not tuple or len(value) != 2 or \
            type(value[0]) is not int or type(value[1]) is not int or\
-           value[0] < 1 or value[1] < 1:
+           value[0] < 0 or value[1] < 0:
             """
             raise error TypeError and push menssage
             """
