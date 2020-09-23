@@ -31,7 +31,8 @@ class Square:
             raise error ValueError and push menssage
             """
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     @property
     def position(self):
@@ -56,12 +57,12 @@ class Square:
         """
         return pow area size
         """
-        return(self.__size * self.__size)
+        return(self.__size ** 2)
 
     def my_print(self):
         if self.__size == 0:
             print()
-        if self.__position[1] >= 0:
+        elif self.__position[1] >= 0:
             print("\n" * self.__position[1], end="")
             for i in range(self.__size):
                 print(" " * self.__position[0], end="")
