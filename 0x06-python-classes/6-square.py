@@ -9,8 +9,8 @@ class Square:
     class square init size and position
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -31,6 +31,7 @@ class Square:
             raise error ValueError and push menssage
             """
             raise ValueError("size must be >= 0")
+        self.__size = value
 
     @property
     def position(self):
