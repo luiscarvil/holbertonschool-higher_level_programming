@@ -1,0 +1,72 @@
+Check Function ```check_square```
+"""
+function that print square with '#'
+"""
+----------------
+
+Check Docstring mod:
+    >>> __import__('4-print_square').__doc__ != None
+    True
+
+Import say_my_name:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+check function Docstring:
+    >>> print_square.__doc__ != None
+    True
+
+check size int square:
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+check size is not int:
+    >>> print_square("Hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(3.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+check size float and negative number:
+    >>> print_square(-4.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+check size less that 0:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+    >>> print_square(-100)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+call function with more than 1 argument:
+    >>> print_square(1, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
+
+
+call function without arguments:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+

@@ -115,4 +115,3 @@ Check call the function with more arguments needed:
         Traceback (most recent call last):
         ...
         TypeError: matrix_divided() takes 2 positional arguments but 3 were given
-
