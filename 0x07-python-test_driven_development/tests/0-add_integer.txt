@@ -12,7 +12,7 @@ Checking docstring mod:
     >>> __import__('0-add_integer').__doc__ != None
     True
 
-Import add_integer function:
+Import add_integer function
 
     >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -21,6 +21,9 @@ check functions docstring:
     >>> add_integer.__doc__ != None
     True
 
+"""
+Hello
+"""
 Basic use function:
     >>> add_integer(2, 1)
     3

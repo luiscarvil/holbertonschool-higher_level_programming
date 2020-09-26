@@ -57,6 +57,13 @@ check size less that 0:
     ...
     ValueError: size must be >= 0
 
+complex numbers:
+    >>> print_square(5j)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
 call function with more than 1 argument:
     >>> print_square(1, 2)
     Traceback (most recent call last):

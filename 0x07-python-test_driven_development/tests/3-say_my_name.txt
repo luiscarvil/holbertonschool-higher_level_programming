@@ -63,6 +63,10 @@ Second string (last_name) is not str:
     ...
     TypeError: last_name must be a string
 
+check sum 2 arg and add:
+    >>> say_my_name("Hello" "World", "Again")
+    My name is HelloWorld Again
+
 Call function with more than 2 arguments:
     >>> say_my_name("Hello", "World, "Again")
     Traceback (most recent call last):

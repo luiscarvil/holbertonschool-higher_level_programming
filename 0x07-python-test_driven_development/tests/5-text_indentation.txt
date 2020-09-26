@@ -1,0 +1,86 @@
+check ```text_identation ```
+"""
+Function that prints a text with 2 new lines after each of these characters:('.','?',':')
+"""
+-----------------
+
+check Docstring mod:
+    >>> __import__('5-text_indentation').__doc__ != None
+    True
+
+Import text_indentation:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+check Docstring Function:
+    >>> text_indentation.__doc__ != None
+    True
+
+Usage with only one argument:
+    >>> text_indentation("Here")
+    Here
+
+Usage string text:
+    >>> text_indentation("Hello, First")
+    Hello, First
+
+    >>> text_indentation("Hello. World: here, 2? stage")
+    Hello.
+    <BLANKLINE>
+    World:
+    <BLANKLINE>
+    here, 2?
+    <BLANKLINE>
+    stage
+
+check string text:
+    >>> text_ind ="texto prueba. para verificar? impresion"
+    >>> text_indentation(text_ind)
+    texto prueba.
+    <BLANKLINE>
+    para verificar?
+    <BLANKLINE>
+    impresion
+
+check 2 concatenate strings:
+    >>> text_indentation("hello." "World")
+    hello.
+    <BLANKLINE>
+    World
+
+chech separators without nothing more:
+    >>> text_indentation("?.:")
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test blank spaces:
+    >>> text_indentation("  This     Mensage.    ?")
+    This     Mensage.
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+chech add strings:
+    >>> text_indentation("")
+
+Check for no string type:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation((4, "H"))
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Check call funtion:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
