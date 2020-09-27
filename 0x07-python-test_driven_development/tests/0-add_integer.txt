@@ -59,6 +59,11 @@ Float infinitive:
     ...
     OverflowError: cannot convert float infinity to integer
 
+    >>> add_integer(float('NaN'), 3)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
 Pass String Chech arg 1 (a):
 
     >>> add_integer("Hello")
