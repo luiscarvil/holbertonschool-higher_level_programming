@@ -19,13 +19,13 @@ class Rectangle:
         self.__height = height
         Rectangle.number_of_instances += 1
 
-
     def __str__(self):
         """ print string """
         if self.width == 0 or self.height == 0:
             return("")
         else:
-            return((str(self.print_symbol) * self.__width + "\n") * self.__height)[:-1]
+            string = self.print_symbol
+            return((str(string) * self.__width + "\n") * self.__height)[:-1]
 
     def __repr__(self):
         """ string convertion """
