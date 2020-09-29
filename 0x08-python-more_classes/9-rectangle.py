@@ -15,6 +15,13 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        """
+        inicialization class
+
+        Args:
+            width (int, another): First int. Defaults to 0.
+            height (int, another): Second int. Defaults to 0.
+        """
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
@@ -94,15 +101,40 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """
+        area 
+
+        Returns:
+            [type]: [description]
+        """
         return self.__height * self.__width
 
     def perimeter(self):
+        """
+        perimeter rectangle
+
+        Returns:
+            int : return 0 or perimeter
+        """
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return (self.__height * 2) + (self.__width * 2)
 
     def bigger_or_equal(rect_1, rect_2):
+        """
+
+        Args:
+            rect_1 (int): rectangle 1
+            rect_2 (int): rectangle 2
+
+        Raises:
+            TypeError: rect_1 must be an instance of Rectangle
+            TypeError: rect_2 must be an instance of Rectangle
+
+        Returns:
+            rect: rect_1 if is  the biggest else rect_2
+        """
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
