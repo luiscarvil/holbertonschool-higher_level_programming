@@ -94,6 +94,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """ area by rectangle """
         return self.__height * self.__width
 
     def perimeter(self):
@@ -103,15 +104,28 @@ class Rectangle:
             return (self.__height * 2) + (self.__width * 2)
 
     def bigger_or_equal(rect_1, rect_2):
+        """ compare 2  rectangles """
+
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() > rect_2.area() or rect_1.area() == rect_2.area():
+            """
+
+            Returns:
+                int: Return rectangle 1
+            """
             return rect_1
         else:
+            """
+
+            Returns:
+            int: Return rectangle 1
+            """
             return rect_2
 
     @classmethod
     def square(cls, size=0):
+        """ return square"""
         return cls(size, size)
