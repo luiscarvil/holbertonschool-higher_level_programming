@@ -102,7 +102,7 @@ class Rectangle:
 
     def area(self):
         """
-        area 
+        area
 
         Returns:
             [type]: [description]
