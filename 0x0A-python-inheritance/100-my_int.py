@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ module comparitions """
+
+
 class MyInt(int):
     """ swapped == and =! """
     def __eq__(self, value):
