@@ -54,6 +54,11 @@ check order:
     >>> _list.print_sorted()
     [-1, 0, 1, 2, 3, 4, 5]
 
+
+    >>> _list.insert(0, 6)
+    >>> print(_list)
+    [6, 1, 2, 3, 4, -1, 5, 0]
+
 check inherits list:
 
     >>> issubclass(MyList, list)
