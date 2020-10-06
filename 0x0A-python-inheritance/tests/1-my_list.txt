@@ -1,0 +1,72 @@
+Test 1-my_list module
+"""
+Test format module
+------------
+Checking docstring mod:
+    >>> __import__('1-my_list').__doc__ != None
+    True
+
+import 'MyList' from '1-my_list' module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+checking doctring:
+    >>> docs = __import__("1-my_list").__doc__
+    >>> len(docs) > 1
+    True
+
+Basic use to module MyList:
+
+    >>> _list = MyList()
+    >>> type(_list)
+    <class '1-my_list.MyList'>
+
+    >>> print(_list)
+    []
+
+checking empty list:
+
+    >>> _list = MyList()
+    >>> _list.print_sorted()
+    []
+
+    >>> _list.print_sorted()
+    []
+
+checking append:
+    >>> _list.append(1)
+    >>> _list.append(2)
+    >>> _list.append(3)
+    >>> _list.append(4)
+    >>> print(_list)
+    [1, 2, 3, 4]
+
+check order:
+    >>> _list.print_sorted()
+    [1, 2, 3, 4]
+
+    >>> _list.append(-1)
+    >>> _list.append(5)
+    >>> _list.append(0)
+    >>> print(_list)
+    [1, 2, 3, 4, -1, 5, 0]
+
+    >>> _list.print_sorted()
+    [-1, 0, 1, 2, 3, 4, 5]
+
+check inherits list:
+
+    >>> issubclass(MyList, list)
+    True
+
+Negative numbers:
+
+        >>> _list = MyList([-24534533212341, 0, -8572042323193, -333492485765544, 3])
+        >>> _list
+        [-24534533212341, 0, -8572042323193, -333492485765544, 3]
+
+Checking for too many arguments:
+	 >>> _list.print_sorted(1)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_sorted() takes 1 positional argument but 2 were given
