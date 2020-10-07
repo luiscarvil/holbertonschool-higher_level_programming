@@ -16,7 +16,7 @@ class Student:
     def to_json(self, attrs=None):
         """Public method
         """
-        if not attrs:
+        if attrs is None:
             return self.__dict__
         else:
             if type(attrs) is list:
