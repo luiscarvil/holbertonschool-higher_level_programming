@@ -19,9 +19,8 @@ class Student:
         if attrs is None:
             return self.__dict__
         else:
-            if type(attrs) is list:
-                new_dict = {}
-                for i in attrs:
-                    if type(i) is str and i in self.__dict__.keys():
-                        new_dict[i] = self.__dict__[i]
-                return new_dict
+            new_dict = {}
+            for i in self.__dict__:
+                if i in attrs:
+                    new_dict[i] = self.__dict__[i]
+            return new_dict
