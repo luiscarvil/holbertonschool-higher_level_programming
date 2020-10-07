@@ -13,15 +13,15 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self, attrs=None):
         """Public method
         """
         if not attrs:
             return self.__dict__
         else:
-            new_dict = {}
-            for i in self.__dict__:
-                if i in attrs:
-                    new_dict[i] = self.__dict__[i]
-            return new_dict
+            if type(attrs) is list:
+                new_dict = {}
+                for i in attrs:
+                    if type(i) is str and i in self.__dict__.keys():
+                        new_dict[i] = self.__dict__[i]
+                return new_dict
