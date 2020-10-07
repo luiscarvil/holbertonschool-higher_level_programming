@@ -9,5 +9,4 @@ def read_file(filename=""):
         filename (str, ""): [name file passed to read].
     """
     with open('my_file_0.txt') as f:
-        read_data = f.read()
-        print("{:s}".format(read_data), end="")
+        print(f.read(), end="")
