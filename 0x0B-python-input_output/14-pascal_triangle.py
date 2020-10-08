@@ -19,7 +19,6 @@ def pascal_triangle(n):
             new_l2 = []
             for j in range(i + 1):
                 new_l2.append(j)
-                print(new_l2)
             for j in range(i):
                 new_l2[0], new_l2[i] = 1, 1
                 new_l2[j] = new_l[i - 1][j] + new_l[i - 1][j - 1]
