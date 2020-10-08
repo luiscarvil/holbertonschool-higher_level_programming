@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""append after open and write
+"""
+
+
 def append_after(filename="", search_string="", new_string=""):
-    with open(filename, 'r') as f:
-        new_str = ""
+    """append method
+    """
+    new_str = ""
+    with open(filename, encoding="utf-8") as f:
         for i in f:
             if search_string in i:
                 new_str += new_string
