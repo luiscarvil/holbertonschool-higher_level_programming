@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+squeare class creation
+"""
 from models.rectangle import Rectangle
 
 
