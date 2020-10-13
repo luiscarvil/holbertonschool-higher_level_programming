@@ -65,7 +65,7 @@ class Base:
                 lista = cls.from_json_string(f.read())
             for i, j in enumerate(lista):
                 lista[i] = cls.create(**lista[i])
-        except:
+        except Exception:
             pass
         return lista
 
