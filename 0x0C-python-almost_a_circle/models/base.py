@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
-import csv
 """
 module defines a Base class
 """
+import json
+import csv
 
 
 class Base:
