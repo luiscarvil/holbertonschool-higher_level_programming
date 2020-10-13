@@ -3,7 +3,6 @@
 Unittest classes
 """
 import unittest
-import pycodestyle
 from models.base import Base, __doc__
 from models.rectangle import Rectangle
 from models.square import Square
@@ -14,31 +13,38 @@ class Base_test_class(unittest.TestCase):
     Unittest for testing instantiation
     """
     def test_base(self):
+        """ test base """
         b = Base(1)
         self.assertEqual(b.id, 1)
         b.id = 9
         self.assertEqual(b.id, 9)
 
     def test_without_arg(self):
+        """ test without arguments """
         self.assertEqual(Base().id, (Base().id) - 1)
 
     def test_more_arg(self):
+        """ test more arguments (3) """
         b1, b2, b3 = Base(), Base(), Base()
         self.assertEqual(b1.id, b3.id - 2)
 
     def test_nb_instance(self):
+        """ test numb instance """
         b1, b2, b3 = Base(), Base(1), Base()
         self.assertEqual(b1.id, b3.id - 1)
 
     def test_id(self):
+        """ tesd id """
         self.assertEqual(5, Base(5).id)
         b, b.id = Base(10), 5
         self.assertEqual(5, b.id)
 
     def test_bool_id(self):
+        """ test boolean id pass """
         self.assertEqual(True, Base(True).id)
 
     def test_base_tuple_id(self):
+        """ test tuple id """
         self.assertEqual((1, 2), Base((1, 2)).id)
 
     def test_num_id(self):
@@ -67,11 +73,6 @@ class Base_test_class(unittest.TestCase):
         self.assertTrue(len(Base.from_json_string.__doc__.strip()) > 0)
         self.assertTrue(len(Base.create.__doc__.strip()) > 0)
         self.assertTrue(len(Base.load_from_file.__doc__.strip()) > 0)
-
-    def test_conformance(self):
-        fchecker = pycodestyle.Checker('models/base.py', show_source=True)
-        file_errors = fchecker.check_all()
-        print("Found %s errors (and warnings)" % file_errors)
 
 
 class TestBase_to_json_string(unittest.TestCase):
