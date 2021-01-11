@@ -2,7 +2,7 @@
 """
 Response header value ( takes in a URL and sends a request to the URL)
 """
-if __name__ == "__main__"
+if __name__ == "__main__":
     import urllib.request
     from sys import argv
     req = urllib.request.Request(argv[1])
